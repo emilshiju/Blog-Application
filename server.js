@@ -23,6 +23,8 @@ connectToMongo(()=>{
 
 const allowedOrigins = [
     "http://localhost:5173",
+    "https://blog-application-frontend-green.vercel.app",
+    "https://blog-application-frontend-green.vercel.app/"
     
   ];
   const corsOptions = {
