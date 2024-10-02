@@ -2,7 +2,7 @@ import express from "express"
 import Register from "./controller/register.js"
 import Login from "./controller/login.js"
 import { verifyAccessToken } from "./services/jwtToken.js"
-import Blog, { EditBlog, getAllBlogs, getAllDraft, getAllPublished, singleBlogDetails } from "./controller/blog.js"
+import Blog, { DeleteBlog, EditBlog, getAllBlogs, getAllDraft, getAllPublished, singleBlogDetails } from "./controller/blog.js"
 import ProfileDetails, { blogProfileDetails, UpdateProfileDetails } from "./controller/profileDetails.js"
 
 
@@ -31,5 +31,7 @@ router.get('/getAllDraft',verifyAccessToken,getAllDraft)
 router.get('/getAllPublished',verifyAccessToken,getAllPublished)
 
 router.get('/blogProfileDetails',verifyAccessToken,blogProfileDetails)
+
+router.post('/deleteBlog',verifyAccessToken,DeleteBlog)
 
 export default router

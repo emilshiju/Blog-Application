@@ -117,3 +117,20 @@ export const getAllPublished=async(req,res,next)=>{
 
 }
 
+
+
+export const DeleteBlog=async(req,res,next)=>{
+
+    const blogId=req.body.blogId
+    console.log("juuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu")
+    console.log(blogId)
+
+    const response=await blogModel.deleteOne({_id:blogId})
+
+
+    return res.json({status:true})
+
+
+
+
+}
